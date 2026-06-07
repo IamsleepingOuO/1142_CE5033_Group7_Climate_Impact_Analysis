@@ -1,8 +1,10 @@
 # 1142_CE5033_Group7_Climate_Impact_Analysis
-
+[![Python Version](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
+[![Docker Support](https://img.shields.io/badge/docker-enabled-blue.svg)](https://www.docker.com/)
+[![Development Branch](https://img.shields.io/badge/branch-dev-orange.svg)](https://github.com/IamsleepingOuO/1142_CE503)
 
 ## How to use
-```cd``` inside the folder
+Downlad the file and ```cd``` inside the folder
 
 ### First time
 
