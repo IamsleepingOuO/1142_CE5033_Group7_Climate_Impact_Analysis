@@ -5,7 +5,7 @@
 
 ## How to use
 Downlad the dataset, put it under the folder.
-https://www.kaggle.com/datasets/uom190346a/global-climate-events-and-economic-impact-dataset
+https://www.kaggle.com/datasets/uom190346a/global-climate-events-and-economic-impact-dataset \
 And ```cd``` into the folder.
 
 ### First time
