@@ -36,3 +36,5 @@ output/models/*.pt
 .idea/
 .DS_Store
 Thumbs.db
+.devcontainer/
+.ipynb_checkpoints/

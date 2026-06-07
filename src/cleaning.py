@@ -12,7 +12,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # 利用 / 符號直接拼接路徑，它會自動處理 Windows(\) 和 Mac/Linux(/) 的斜線差異
 file_path = BASE_DIR / 'data' / 'raw' / 'global_climate_events_economic_impact_2020_2025.csv'
-output_path = BASE_DIR / 'data' / 'processed' / 'global_climate_events_economic_impact_2020_2025.csv'
+output_path = BASE_DIR / 'data' / 'processed' / 'global_climate_events_economic_impact_2020_2025_processed.csv'
+output_path_standardized = BASE_DIR / 'data' / 'standardized' / 'global_climate_events_economic_impact_2020_2025_standardized.csv'
 
 # ==========================================
 # 2. 執行資料清洗流程
@@ -39,16 +40,23 @@ def clean_data():
         if df[col].isnull().sum() > 0:
             df[col] = df[col].fillna(df[col].mode()[0])
 
-    # 正規化
-    scaler = StandardScaler()
-    df[num_cols] = scaler.fit_transform(df[num_cols])
-
     # 確保 processed 資料夾存在，若沒有則自動建立
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     # 匯出資料
     df.to_csv(output_path, index=False)
-    print(f"\n 資料清洗與正規化完成！已儲存至: {output_path}")
+    print(f"\n 資料清洗完成！已儲存至: {output_path}")
+
+    # 標準化
+    scaler = StandardScaler()
+    df[num_cols] = scaler.fit_transform(df[num_cols])
+
+    # 確保 standardized 資料夾存在，若沒有則自動建立
+    output_path_standardized.parent.mkdir(parents=True, exist_ok=True)
+    
+    # 再次儲存標準化後的資料
+    df.to_csv(output_path_standardized, index=False)
+    print(f"\n資料標準化完成！已儲存至: {output_path_standardized}")
 
 # 當這個腳本被直接執行時，觸發清洗流程
 if __name__ == "__main__":
