@@ -62,7 +62,7 @@ def main():
         palette='viridis', 
         legend=False
     )
-    plt.title('預測極端氣候災損：前十大關鍵特徵', fontsize=16)
+    plt.title('Predicting Extreme Climate Damages: Top 10 Feature Importances', fontsize=16)
     plt.tight_layout()
     
     # 儲存成高畫質圖片 (dpi=300)
