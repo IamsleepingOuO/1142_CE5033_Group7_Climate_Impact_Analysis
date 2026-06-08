@@ -4,9 +4,9 @@
 [![Development Branch](https://img.shields.io/badge/branch-dev-orange.svg)](https://github.com/IamsleepingOuO/1142_CE503)
 
 ## How to use
-Downlad the dataset, put it under the folder.
+Downlad the dataset, put it under the folder `data/raw/`.
 https://www.kaggle.com/datasets/uom190346a/global-climate-events-and-economic-impact-dataset \
-And ```cd``` into the folder.
+And `cd` into the folder.
 
 ### First time
 

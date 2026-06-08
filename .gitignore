@@ -38,3 +38,4 @@ output/models/*.pt
 Thumbs.db
 .devcontainer/
 .ipynb_checkpoints/
+.Trash-0/
